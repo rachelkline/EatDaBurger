@@ -6,8 +6,10 @@ var burger = {
             cb(res);
         });
     },
-    addBurger: function() {
-
+    addBurger: function(cols, vals, cb) {
+        orm.addBurger("burgers", cols, vals, function(res) {
+            cb(res);
+        })
     },
     eatBurger: function(objColVals, condition, cb) {
         orm.eatBurger("burgers", objColVals, condition, function(res) {

@@ -19,5 +19,19 @@ $(function() {
         });
     });
 
-    $(".")
+    $("#addBurger").on("click", function(event) {
+        console.log("CLICKED");
+        event.preventDefault();
+        const newBurger = {
+            burger_name: $("#burgerName").val().trim(),
+            devoured: 0
+        };
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+        }).then(function() {
+            console.log("Burger added");
+            location.reload();
+        });
+    });
 });

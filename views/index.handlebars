@@ -1,31 +1,26 @@
 <nav class="navbar bg-dark">
     <h1>EAT DA BURGER</h1>
 </nav>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <span><strong> {{this.id}} = {{this.burger_name}} </strong></span>
-                <button type="button" class="eatburger" id="eatBtn" data-id="{{this.id}}"
-                    data-newDevoured="{{devour}}">DEVOUR</button>
-                <br>
-                {{/unless}}
-                {{/each}}
-            </ul>
+                {{> uneatenBurgers}}
         </div>    
         <div class="col">
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                <span><strong>{{this.id}} = {{this.burger_name}}</strong></span>
-                <button type="button" class="delete" id="deleteBtn" data-id="{{this.id}}">DELETE</button> 
-                {{/if}}
-                {{/each}}
-            </ul>
+          
+                {{> eatenBurgers }}
+         
+        </div>   
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name" id="burgerName">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button" id="addBurger">Add</button>
+                </div>
+            </div>
         </div>
-
-        
     </div>
 </div>

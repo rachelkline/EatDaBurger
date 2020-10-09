@@ -30,8 +30,20 @@ $(function() {
             type: "POST",
             data: newBurger
         }).then(function() {
-            console.log("Burger added");
             location.reload();
+        });
+    });
+
+    $(".deleteburger").on("click", function(event) {
+        event.preventDefault();
+        console.log("CLICKED");
+        const burgID = $(this).attr("data-id");
+        console.log(burgID);
+
+        $.ajax("/api/burgers/" + burgID, {
+            method: "DELETE"
+        }).then(function() {
+            window.location = "/"
         });
     });
 });

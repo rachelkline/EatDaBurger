@@ -43,7 +43,7 @@ var orm = {
             if (err) {
                 throw err;
             }
-            // console.log(data)
+            console.log(data)
             cb(data)
         });    
     },
@@ -86,9 +86,26 @@ var orm = {
     },
 
     //Function to delete burger from db
-    deleteBurger: function () {
 
+    deleteBurger: function(table, col, val, cb) {
+        connection.query("DELETE FROM ?? WHERE ?? = ?", [table, col, val], function(err, data) {
+            if(err)
+                throw err;
+            return cb(data);
+        });
     }
+    // deleteBurger: function (table, condition, cb) {
+    //     var queryString = "DELETE FROM " + table;
+    //     queryString += " WHERE ";
+    //     queryString += condition;
+
+    //     connection.query(queryString, function(err, result) {
+    //         if(err) {
+    //             throw err;
+    //         }
+    //         cb(result)
+    //     });
+    // }
 };
 
 //Export ORM

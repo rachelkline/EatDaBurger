@@ -15,7 +15,17 @@ var burger = {
         orm.eatBurger("burgers", objColVals, condition, function(res) {
             cb(res);
         });
+    },
+    deleteBurger: function(val, cb) {
+        orm.deleteBurger("burgers", "id", val, function(data) {
+            cb(data);
+        });
     }
+    // deleteBurger: function(val, cb) {
+    //     orm.deleteBurger("burgers", "id", val, function(res) {
+    //         cb(res);
+    //     });
+    // }
 };
 
 

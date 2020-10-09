@@ -45,5 +45,25 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
+//Delete a burger
+router.delete("/api/burgers/:id", (req, res) => {
+    console.log("DELETE HIT!");
+
+    const burgID = req.params.id;
+    console.log(burgID);
+
+    burger.deleteBurger(burgID, function() {
+        console.log("Burger id " + burgID + " was removed.");
+
+        res.status(200).end();
+    })
+})
+// router.delete("/api/burgers/:id", function(req, res) {
+//     const burgID = "id = " + req.params.id;
+    
+//     burger.deleteBurger(burgID, function(result){
+//         res.status(200).end();
+//     });
+// });
 
 module.exports = router;

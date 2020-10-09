@@ -1,17 +1,22 @@
 <div class="card">
     <div class="card-header text-center">
-        <h4>Devoured</h4>
+        <h4>Devoured Burgers<i class="fas fa-utensils ml-2"></i>
+
+        </h4>
     </div>
     <div class="card-body">
-
         {{#each devouredList}}
-        <div>
-            <p>{{id}} {{burger_name}}
-                <button class="deleteburger btn btn-sm btn-outline-danger m-1 devour-btn float-right"
-                            data-id="{{id}}">DELETE
+        <div class="row">
+            <div class="col">
+            <p>{{this.id}}). {{this.burger_name}}</p>  
+            </div>
+            <div class="col">
+            <button class="deleteburger btn btn-sm btn-outline-danger m-1 devour-btn float-right"
+                            data-id="{{id}}">DELETE<i class="fas fa-trash-alt ml-1"></i>
                     </button>
-            </p>
+               </div>   
           </div>  
+          <hr>
         {{/each }}
 
     </div>

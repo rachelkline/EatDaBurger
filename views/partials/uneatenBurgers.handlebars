@@ -1,17 +1,24 @@
 <div class="card">
     <div class="card-header text-center">
-        <h4>New Burgers</h4>
+        <h4>New Burgers Menu
+          <i class="fas fa-hamburger ml-2"></i>  
+        </h4>
+        
     </div>
     <div class="card-body">
 
         {{#each undevouredList}}
-            <div>
-                <p>{{this.id}} {{this.burger_name}}
+            <div class="row">
+                <div class="col">
+                <p>{{this.id}}). {{this.burger_name}}</p>
+                </div>
+                <div class="col">
                     <button class="eatburger btn btn-sm btn-outline-danger m-1 devour-btn float-right"
                             data-id="{{id}}">Devour<i class="fas fa-utensils ml-2"></i>
                     </button>
-                </p>
+                </div>
             </div>
+            <hr>
         {{/each }}
 
     </div>

@@ -1,0 +1,61 @@
+body, html {
+    background-image: url("../imgs/burgers.jpg");
+    background-attachment: scroll;
+}
+
+.card {
+    border: 5px solid black;
+}
+
+.card-body {
+    background-image: url("../imgs/ps_neutral_@2x.png");
+}
+
+#addBurger {
+    color: white;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#burgHead {
+    color: white;
+    text-shadow: 0 2px 2px black;
+}
+
+#burgImg {
+    width: 100%;
+}
+
+.hr2 {
+    border: 2px dashed white;
+}
+
+.burgInput {
+    height: 200%;
+}
+
+.jumbotron {
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid white;
+    padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.display-2 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.deleteburger, .eatburger {
+    height: 75%;
+}
+
+footer {
+    position: fixed;
+    color: white;
+    bottom: 0;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    background-color: #343A40;
+    border-top: 5px solid white;
+}

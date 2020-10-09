@@ -1,26 +1,54 @@
-<nav class="navbar bg-dark">
-    <h1>EAT DA BURGER</h1>
-</nav>
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-                {{> uneatenBurgers}}
-        </div>    
-        <div class="col">
-          
-                {{> eatenBurgers }}
-         
-        </div>   
-    </div>
-    <div class="row mt-5">
-        <div class="col-md-6 offset-md-3">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name" id="burgerName">
+<nav class="jumbotron bg-dark jumbotron-fluid">
+    <div class="container">
+  <h1 class="display-2">EAT-DA-BURGER</h1>
+{{!-- <h2 >Hungry? Add a Burger To The Menu...</h2>
+  <hr class="my-4">
+  <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+                    id="burgerName">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-success" type="button" id="addBurger">Add</button>
+                    <button class="btn btn-warning" type="button" id="addBurger">Add<i
+                            class="fas fa-hamburger ml-2"></i>
+                    </button>
+                </div>
+            </div> --}}
+        </div>    
+</nav>
+{{!-- <nav class="navbar bg-dark">
+    <h1>EAT-DA-BURGER</h1>
+</nav> --}}
+<div class="container">
+    <div class="row mt-5" id="burgInput">
+        <div class="col-sm-8">
+            <h2 id="burgHead">Hungry? Add a Burger To The Menu...</h2>
+        </div>
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+                    id="burgerName">
+                <div class="input-group-append">
+                    <button class="btn btn-warning" type="button" id="addBurger">Add<i
+                            class="fas fa-hamburger ml-2"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <hr class="hr2">
+    <div class="row">
+        <div class="col-sm-4">
+            {{> uneatenBurgers}}
+        </div>
+        <div class="col-sm-4">
+            <img id="burgImg" src="../assets/imgs/burgerburger.png">
+        </div>
+        <div class="col-sm-4">
+
+            {{> eatenBurgers }}
+
+        </div>
+    </div>
 </div>
+<br>
+<br>
